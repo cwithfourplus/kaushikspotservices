@@ -4,7 +4,7 @@ A light weight library to provide Remote Method Invocation (RMI) for application
 
 ```diff
 Note: This project was originally published on CodePlex in 2011 and as CodePlex was closed, I have restored it here. 
-There is no active development going on here, now purpose of this repo is to provide reference of how to build 
+There is no active development going on this project, now purpose of this repo is to provide reference of how to build 
 a simple RPC/RMI from gorund up!!
 ```
 
