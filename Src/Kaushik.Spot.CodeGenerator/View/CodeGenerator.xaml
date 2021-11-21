@@ -1,0 +1,57 @@
+﻿<Window x:Class="Kaushik.Spot.CodeGenerator.View.CodeGenerator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Kaushik.Spot.CodeGenerator.ViewModel"
+        Title="Kaushik Code Generator" Height="538" Width="536" ResizeMode="NoResize">
+    <StackPanel Orientation="Vertical">
+        <GroupBox Header="Assembly Details" Height="254" HorizontalAlignment="Left" Margin="5,1,0,0" Name="assemblyDetails" VerticalAlignment="Top" Width="498">
+            <Grid>
+                <Label Content="Select Assembly" Height="28" HorizontalAlignment="Left" Margin="12,28,0,0" Name="label1" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="110,28,0,0" Name="assemblyFullPath" Text="{Binding AssemblyPath, Mode=TwoWay}" VerticalAlignment="Top" Width="246" />
+                <Button Content="Browse" Height="23" HorizontalAlignment="Left" Margin="376,28,0,0" Name="browse" VerticalAlignment="Top" Width="75" Command="{Binding BrowseAssemblyAndLoad}" />
+                <ListBox Height="135" HorizontalAlignment="Left" Margin="26,76,0,0" Name="typesList" VerticalAlignment="Top" Width="433" 
+                         ItemsSource="{Binding Services, Mode=TwoWay}" SelectedValue="{Binding SelectedService, Mode=TwoWay}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding FullName}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Proxy Class Details" Height="226" HorizontalAlignment="Left" Margin="5,1,0,0" Name="proxyClassDetails" VerticalAlignment="Top" Width="498">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Namespace" Height="28" HorizontalAlignment="Left" Name="label2" VerticalAlignment="Top"/>
+                <TextBox Grid.Row="0" Grid.Column="1"  Text="{Binding NamespaceName}" Height="23" HorizontalAlignment="Left" Name="namespaceName" VerticalAlignment="Top" Width="243" />
+                <Label Grid.Row="1" Grid.Column="0"  Content="Proxy Class Name" Height="28" HorizontalAlignment="Left" Name="label4" VerticalAlignment="Top" />
+                <TextBox Grid.Row="1" Grid.Column="1"  Text="{Binding ProxyClassName}" Height="23" HorizontalAlignment="Left" Name="proxyClassName" VerticalAlignment="Top" Width="243"/>
+                <Label Grid.Row="2" Grid.Column="0"  Content="Server IP or Host Name" Height="28" HorizontalAlignment="Left" Name="label3" VerticalAlignment="Top" />
+                <TextBox Grid.Row="2" Grid.Column="1"  Text="{Binding Server}" Height="23" HorizontalAlignment="Left" Name="server" VerticalAlignment="Top" Width="243" />
+                <Label Grid.Row="3" Grid.Column="0"  Content="Port Number" Height="28" HorizontalAlignment="Left" Name="label5" VerticalAlignment="Top"  />
+                <TextBox Grid.Row="3" Grid.Column="1"  Text="{Binding Port}" Height="23" HorizontalAlignment="Left" Name="port" VerticalAlignment="Top" Width="243"/>
+                <Label Grid.Row="4" Grid.Column="0"  Content="Output Language" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox Grid.Row="4" Grid.Column="1"  Height="23" HorizontalAlignment="Left" Name="language" VerticalAlignment="Top" Width="243" 
+                          SelectedValue="{Binding OutputLanguage, Mode=TwoWay}" ItemsSource="{Binding LanguageOptions}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <Button Grid.Row="5" Grid.Column="1" Content="Generate" Height="23" HorizontalAlignment="Right" Name="generate" VerticalAlignment="Center" Width="75" Command="{Binding GenerateProxy}"/>
+            </Grid>
+        </GroupBox>
+    </StackPanel>
+</Window>

@@ -1,0 +1,8 @@
+﻿<Window x:Class="Kaushik.Spot.CodeGenerator.View.ShowProxyCode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Proxy Code" Height="473" Width="618" Name="ShowProxyCodeScreen" ResizeMode="NoResize">
+    <Grid>
+        <TextBox Height="434" Width="596" Text="{Binding Mode=OneTime}" HorizontalAlignment="Left" Name="code" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
+    </Grid>
+</Window>
