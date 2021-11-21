@@ -2,7 +2,7 @@
 
 A light weight library to provide Remote Method Invocation (RMI) for application running on .NET Micro Framework.
 
-#### Note: This project was originally published on CodePlex in 2011 and as CodePlex was closed and I have restored it here. There is no active development going on here, now purpose of this repo is to provide reference of how to build a simple RPC/RMI from gorund up!! #### 
+#### Note: This project was originally published on CodePlex in 2011 and as CodePlex was closed, I have restored it here. There is no active development going on here, now purpose of this repo is to provide reference of how to build a simple RPC/RMI from gorund up!! #### 
 
 This is a digital world where devices collaborate to solve some business problem. As we move ahead these devices are not limited to High end servers; we have PCs, Laptops, Smart Phones and Embedded systems that play a vital role in this collaboration.
 
