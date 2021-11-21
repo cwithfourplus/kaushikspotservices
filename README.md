@@ -31,6 +31,8 @@ Here are the possible setups in which you can use it:
 
 There is no release of this project so far and right now I am not sure if there would be one until Feb 2012, so please download the source code from latest changeset on Source Code Tab. A demo video of the work is avalable on [YouTube](http://www.youtube.com/watch?v=eO0eGp7Bgls)
 
+[![image](https://user-images.githubusercontent.com/34212924/142757824-b2087042-c5d3-4835-9d7d-a285db36f056.png)](http://www.youtube.com/watch?v=eO0eGp7Bgls)
+
 ## General Approach ##
 * Micro Controller can use GPIO pins to form Transistor based switch to control Appliances.
 * Methods can be written to control GPIO output.
